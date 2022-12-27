@@ -1,32 +1,37 @@
-import random
+import some_functions as sf  # Деякі корисні функції
 
 def first ():
-	num_sum = 0
+	# ініціалізація пермінних
+	result = 0
 
-	for x in range(1000):
-		if x % 3 == 0 or x % 5 == 0 :
-			num_sum += x
+	for x in range(1000): # Цикил який проходить по всім числом від 0 до 1000
+		if x % 3 == 0 or x % 5 == 0 : # Перевірка чи дане число ділиться бещ остачі на 3 або на 5
+			result += x # Якщо ділиться то додаєм число до result 
 
-	print(num_sum)
+	print(result) # Виводим результат на екран
 
 def second ():
-	num_sum = 0
-	num_array = [1, 1]
+	# ініціалізація пермінних
+	result = 0
+	num_array = [1, 1] # Це деякі числа порядку фибаначі і минуле його число
 
-	for x in range(4 * 10 ** 6):
-		a = x % 2
-		num_array[a] = sum(num_array)
+	for x in range(4 * 10 ** 6): # Цикил від 0 до 4 000 000 ( Взагалі тут мав буди нескінченний масив на кожній ітерації якого ми маєм змогу получити ноиер ітерації )
+		a = x % 2 # перемінна для почергового запису наступного числа ряду фібаначі в праву бо в ліву сторону
+		num_array[a] = sum(num_array) # запис числа фібаначі в num_array 
 
-		if num_array[a] % 2 == 0:
-			num_sum += num_array[a]
+		if num_array[a] % 2 == 0: # Якщо число яке ми тільки що записали без остачі ділиться на 2
+			result += num_array[a] # То додаєм його в результат
 
-		if num_sum > 4 * 10 ** 6:
-			break
+		if result > 4 * 10 ** 6: # Якщо результат більший за 4 000 000
+			break # То виходим з цикла
 
-	print(num_sum)
+	print(result) # Виводим результат на екран
 
 def third ():
 	num = 600851475143
+	iteration = 2
+	y = 2
+	result = 0
 	
 def fourth ():
 	pass
