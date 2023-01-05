@@ -5,9 +5,3 @@ def prime_number_check (num) :
 			return False
 		x += 1
 	return True
-
-def main ():
-	pass
-
-if __name__ == '__main__':
-	main()
